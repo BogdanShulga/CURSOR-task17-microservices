@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.*;
 public class BookController {
     private BookService bookService;
 
-    @PostMapping("/save_book")
+    @PostMapping("/book")
     public void saveAuthor(@RequestBody Book book) {
         bookService.saveBook(book);
     }
 
-    @GetMapping("/find_book/{bookID}")
+    @GetMapping("/book/{bookID}")
     public Book findAuthor(@PathVariable("bookID") Long authorID) {
         return bookService.findBook(authorID);
     }
 
-    @DeleteMapping("/delete_book/{bookID}")
+    @DeleteMapping("/book/{bookID}")
     public void deleteAuthor(@PathVariable("bookID") Long authorID) {
         bookService.deleteBook(authorID);
     }

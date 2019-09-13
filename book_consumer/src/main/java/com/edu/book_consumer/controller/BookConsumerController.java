@@ -13,7 +13,7 @@ public class BookConsumerController {
 
     private LibraryFeignClient libraryFeignClient;
 
-    @GetMapping("/find_book/{bookID}")
+    @GetMapping("/book/{bookID}")
     public Book findAuthor(@PathVariable("bookID") Long authorID){
         return libraryFeignClient.findAuthor(authorID);
     }

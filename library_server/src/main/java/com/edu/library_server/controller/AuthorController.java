@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.*;
 public class AuthorController {
     private AuthorService authorService;
 
-    @PostMapping("/saveAuthor")
+    @PostMapping("/author")
     public void saveAuthor(@RequestBody Author author) {
         authorService.saveAuthor(author);
     }
 
-    @GetMapping("/find_author/{authorID}")
+    @GetMapping("/author/{authorID}")
     public Author findAuthor(@PathVariable("authorID") Long authorID) {
         return authorService.findAuthor(authorID);
     }
 
-    @DeleteMapping("/delete_author/{authorID}")
+    @DeleteMapping("/author/{authorID}")
     public void deleteAuthor(@PathVariable("authorID") Long authorID) {
         authorService.deleteAuthor(authorID);
     }

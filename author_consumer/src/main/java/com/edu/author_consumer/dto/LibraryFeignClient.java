@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "library-service")
 public interface LibraryFeignClient {
 
-    @GetMapping("/find_author/{authorID}")
+    @GetMapping("/author/{authorID}")
     Author findAuthor(@PathVariable("authorID") Long authorID);
 }
